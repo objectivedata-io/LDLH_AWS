@@ -22,7 +22,7 @@ def sparkSqlQuery(glueContext, query, mapping, transformation_ctx) -> DynamicFra
 glue = boto3.client('glue')
 paginator = glue.get_paginator('get_tables')
 page_iterator = paginator.paginate(
-    DatabaseName='pg_replica'   
+    DatabaseName='yourdb'   
 )
 
 for page in page_iterator:
